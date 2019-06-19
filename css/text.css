@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Akko W01;
+  src: url(../fonts/AkkoW01-Light.otf);
+}
+
+@font-face {
+  font-family: akkoLight;
+  src: url(../fonts/AkkoW01-Light.ttf);
+}
+
+.regular-text{
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  font-family: akko w01;
+  font-size: 62px;
+  color: white;
+}
+
+.strong-text{
+  font-family: Akko W01;
+  font-weight: lighter;
+  font-size: 60px;
+  color:white;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
