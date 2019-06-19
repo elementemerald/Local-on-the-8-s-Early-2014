@@ -6,7 +6,7 @@ This is a local an emulation of the Local on the 8's segment that is featured on
 
 ## Instructions
 ## Option 1 (easier)
-1. Visit: <TBD>
+1. Visit: <http://htmlpreview.github.io/?https://github.com/TWCJaden/Local-on-the-8-s-Early-2014/blob/master/index.html>
 2. Enter zip code
 3. Click start
 4. Press F11 for fullscreen
