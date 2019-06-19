@@ -4,7 +4,7 @@ function setMainBackground(){
 
 function getRandomBackgroundPath(){
   var backgroundFolder = getBackgroundFolder();
-  if (backgroundFolder === 'other') return 'https://cdn.discordapp.com/attachments/443958333016375308/589901613452230658/24.png'
+  if (backgroundFolder === 'other') return 'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/EUd3zTsagim54qlzl/timelapse-clouds-over-the-field-full-hd-autumn-landscape-footage-european-winter-landscape_e1t2henpg__F0000.png'
   var folderCount = getFolderCount(backgroundFolder);
   var index = randomNumber(folderCount);
   var filePath = 'assets/backgrounds/' + backgroundFolder + "/" + index + '.jpg';
