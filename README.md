@@ -1,4 +1,4 @@
-# Intellistar 2 XD Emulator
+# Intellistar 2 HD Emulator (Q1' 2014)
 A web application that displays weather information in the same visual presentation as the cable headend unit [Intellistar](https://en.wikipedia.org/wiki/IntelliStar).
 
 ## Overview
