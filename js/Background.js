@@ -4,7 +4,7 @@ function setMainBackground(){
 
 function getRandomBackgroundPath(){
   var backgroundFolder = getBackgroundFolder();
-  if (backgroundFolder === 'other') return 'https://picsum.photos/1920/1080/?random'
+  if (backgroundFolder === 'other') return 'https://cdn.discordapp.com/attachments/376883549401382913/590732391392215089/starrynight-1560911965524-421.jpg'
 
   var folderCount = getFolderCount(backgroundFolder);
   var index = randomNumber(folderCount);
