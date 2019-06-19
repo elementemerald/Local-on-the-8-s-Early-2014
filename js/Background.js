@@ -4,7 +4,7 @@ function setMainBackground(){
 
 function getRandomBackgroundPath(){
   var backgroundFolder = getBackgroundFolder();
-  if (backgroundFolder === 'other') return 'https://lh3.googleusercontent.com/8SUrvzazjALC5kEYySvjcySw0pgrD-0yd8NJZJLlzENPWd7lwqriwdoBy5e5ZN0Gkv3ZQ8IYrQ01vyjH_2IjszWKT3lPNWmwOC_c2duSaTUpWfEv_xxhe40qgtg3eSwOa7viSVqxbQ20znhTjh_WZE2ahEPgTZLCNpACr_5VCykPkoFvn9vl02dt3_jtcdqR8jThOk6U0fA4WzD1S1z2o2QWxI8ULS0x510B6C68daA0a85DfdFfeA55bf7c436c29b7d792zvTQsAuoK8c0gPMU8qyXTerPvyU3F4M15gF_DNL-rL4iUF2FxjgjMY_XvI8mw0kiFA3p0pvdVCnW9eV6y8OlT4w_YRpBS0OV0vuQoCqIrnq7OPECExDZ9iphvMwtQHh-W27YtsbFPa9asGXnF82jw-nargeGbHi8bXxRWphv26AtUGAHt5oyuk4wPi3bXr2gZcVYepeipjq37JK9cLiYk1BV1nZ7udiFr6MNqj3PGR4PGXzCGYQw7UemxRoRxCC97qyJPEg-L4FU9v7a25aEQenPMJNuqUwhg5W8UMFs66YBXrBVhhZzMF56izDL_kO-0Vj8NqmcnHFztp53C1pSdpVjsf9ANBCtpYHKomCBSd8pk0-OVgxrS8Qq-IH7urB9sg5vCav0fHtTNK_m5BMhQg=w1920-h1080-no'
+  if (backgroundFolder === 'other') return 'https://cdn.discordapp.com/attachments/376883549401382913/590732391392215089/starrynight-1560911965524-421.jpg'
 
   var folderCount = getFolderCount(backgroundFolder);
   var index = randomNumber(folderCount);
