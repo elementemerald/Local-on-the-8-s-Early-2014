@@ -4,8 +4,7 @@ function setMainBackground(){
 
 function getRandomBackgroundPath(){
   var backgroundFolder = getBackgroundFolder();
-  if (backgroundFolder === 'other') return 'https://cdn.discordapp.com/attachments/443958333016375308/590495860110917632/Webp.net-resizeimage_1.jpg'
-
+  
   var folderCount = getFolderCount(backgroundFolder);
   var index = randomNumber(folderCount);
   var filePath = 'assets/backgrounds/' + backgroundFolder + "/" + index + '.jpg';
