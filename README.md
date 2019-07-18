@@ -4,6 +4,10 @@ A web application that displays weather information in the same visual presentat
 ## Overview
 This is an emulation of the Local on the 8's segment that is featured on The Weather Channel. Local on the 8's is normally generated on a custom server at your Cable Provider. This is the version from Early 2014, but the intro, hourly forecast, and outro portions have not been added. Backgrounds come from real STAR units. The music is what was played during that time. Feel free to edit this and add the features that were in the 2014, I won't be able to complete that.
 
+## Credits
+Credits go to the main developer who made most of this as I edited it to look like the 2014 version.
+Credits to Austin (AWNetwork) for helping maintain the emulator and keeping it runnning.
+
 ## Instructions
 ## Option 1 (easier)
 1. Visit: <https://cdn.rawgit.com/TWCJaden/Local-on-the-8-s-Early-2014/master/index.html>
