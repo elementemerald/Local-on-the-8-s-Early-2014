@@ -6,7 +6,7 @@ This is an emulation of the Local on the 8's segment that is featured on The Wea
 
 ## Credits
 Credits go to the main developer who made most of this as I edited it to look like the 2014 version.
-Credits to Austin (AWNetwork) for helping maintain the emulator and keeping it runnning.
+Credits to Austin (AWNetwork) for helping maintain the emulator and keeping it running.
 
 ## Instructions
 ## Option 1 (easier)
