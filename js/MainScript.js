@@ -1,41 +1,17 @@
+// Preset timeline sequences
 const MORNING = [{name: "Now", subpages: [{name: "current-page", duration: 9000}, {name: "radar-page", duration: 8000}]},{name: "Today", subpages: [{name: "today-page", duration: 10000}]},{name: "Tonight", subpages: [{name: "tonight-page", duration: 10000}]},{name: "Beyond", subpages: [{name: "tomorrow-page", duration: 10000}, {name: "7day-page", duration: 13000}]},]
 const NIGHT = [{name: "Now", subpages: [{name: "current-page", duration: 9000}, {name: "radar-page", duration: 8000}]},{name: "Tonight", subpages: [{name: "tonight-page", duration: 10000}]},{name: "Beyond", subpages: [{name: "tomorrow-page", duration: 10000}, {name: "tomorrow-night-page", duration: 10000}, {name: "7day-page", duration: 13000}]},]
 const SINGLE = [{name: "Alert", subpages: [{name: "single-alert-page", duration: 7000}]},{name: "Now", subpages: [{name: "current-page", duration: 8000}, {name: "radar-page", duration: 8000}, {name: "zoomed-radar-page", duration: 8000}]},{name: "Tonight", subpages: [{name: "tonight-page", duration: 8000}]},{name: "Beyond", subpages: [{name: "tomorrow-page", duration: 8000}, {name: "7day-page", duration: 13000}]},]
 const MULTIPLE = [{name: "Alerts", subpages: [{name: "multiple-alerts-page", duration: 7000}]},{name: "Now", subpages: [{name: "current-page", duration: 8000}, {name: "radar-page", duration: 8000}, {name: "zoomed-radar-page", duration: 8000}]},{name: "Tonight", subpages: [{name: "tonight-page", duration: 8000}]},{name: "Beyond", subpages: [{name: "tomorrow-page", duration: 8000}, {name: "7day-page", duration: 13000}]},]
 const WEEKDAY = ["SUN",  "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
 const jingle = new Audio("assets/music/jingle.wav")
-const crawlSpeed = 150;
+const crawlSpeed = 74;
+
 var isDay = true;
 var currentLogo;
 var currentLogoIndex = 0;
-var zipCode;
-var longitude;
-var latitude;
-var cityName;
-var currentTemperature;
-var currentIcon;
-var currentCondition;
-var windSpeed;
-var gusts;
-var feelsLike;
-var visibility;
-var humidity;
-var dewPoint;
-var pressure;
-var pressureTrend;
-var forecastNarrative = [];
-var forecastTemp = [];
-var forecastIcon = [];
-var forecastPrecip = [];
-var outlookHigh = [];
-var outlookLow = [];
-var outlookCondition = [];
-var outlookIcon = [];
 var pageOrder;
-var radarImage;
-var alertsActive;
-var zoomedRadarImage;
-var alerts = [];
 var music;
 
 window.onload = function() {
@@ -44,6 +20,7 @@ window.onload = function() {
   CONFIG.addOption('greetingText', 'Greeting Text', 'Message (or joke) that appears at the start')
   CONFIG.load();
   preLoadMusic();
+  setMainBackground();
   resizeWindow();
   setClockTime();
   if (localStorage.getItem('loop') !== 'y') {
@@ -88,52 +65,6 @@ function scheduleTimeline(){
   setInformation();
 }
 
-/* Because this particular API doesn't seem to have day by day precipitation,
-we use things like the temperature and narrative to try and guess it */
-function guessPrecipitation(narrativeText, temperature){
-  var precipType = "";
-  var precipValue = "0"
-
-  // Guess percent chance
-  var parsedChance = narrativeText.match(/\S+(?=%)/g);
-  if(parsedChance != null){
-    precipValue = parsedChance;
-  }
-  else if(precipValue === "0"){
-    if(narrativeText.toLowerCase().includes("slight chance")){
-      precipValue = "20";
-    }else if (narrativeText.toLowerCase().includes("a few") && narrativeText.toLowerCase().includes("possible")){
-      precipValue = "10";
-    }
-  }
-
-  // Guess type of precipitation (i.e. rain, snow)
-    var narrativeLowerCase = narrativeText.toLowerCase();
-  if(narrativeLowerCase.includes("chance of precip")){
-    precipType = "Precip";
-  }
-  else if(  narrativeLowerCase.includes("snow") || narrativeLowerCase.includes("flurr")){
-    precipType = "Snow";
-  }
-  else if(narrativeLowerCase.includes("rain") || narrativeLowerCase.includes("shower")){
-    precipType = "Rain"
-  }
-
-  /* Just because the temperature is below the freezing point of 32 degress, doesn't neccesarly
-     mean that precipitation would be snow, however if there is no text to indicate pricpitation (i.e. 0% chance)
-     then it doesn't really matter if it says 0% chance of snow or rain because neither would happen anyway */
-     if(precipType == ""){
-       if(temperature <= 32){
-         precipType = "Snow";
-       }
-       else{
-         precipType = "Rain"
-       }
-     }
-
-  return precipValue + "% Chance</br>of " + precipType;
-}
-
 function revealTimeline(){
   getElement('timeline-event-container').classList.add('shown');
   getElement('progressbar-container').classList.add('shown');
@@ -148,7 +79,6 @@ function revealTimeline(){
 the appropriate elements */
 function setInformation(){
   setGreetingPage();
-  setMainBackground();
   checkStormMusic();
   setAlertPage();
   setForecast();
@@ -160,8 +90,12 @@ function setInformation(){
   setTimeout(startAnimation, 1000);
 }
 
+function setMainBackground(){
+  getElement('background-image').style.backgroundImage = 'url(https://picsum.photos/1920/1080/?random';
+}
+
 function checkStormMusic(){
-  if(currentCondition.includes("storm")){
+  if(currentCondition.toLowerCase().includes("storm")){
     music= new Audio("assets/music/storm.wav");
   }
 }

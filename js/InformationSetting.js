@@ -153,33 +153,33 @@ function setInitialPositionCurrentPage(){
 function getPageLogoFileName(subPageName){
   switch (subPageName) {
     case "single-alert-page":
-      return "8logo.svg";
+      return "LOT8s.svg";
 
     case "multiple-alerts-page":
-      return "8logo.svg";
+      return "LOT8s.svg";
 
     case "current-page":
-      return "thermometer.svg";
+      return "tempnow.svg";
 
     case "radar-page":
-      return "radar1.svg";
+      return "regionalradar.svg";
 
     case "zoomed-radar-page":
-      return "radar2.svg";
+      return "metroradar.svg";
 
     case "today-page":
-      return "calendar.svg";
+      return "forecast.svg";
 
     case "tonight-page":
-      return "calendar.svg";
+      return "forecast.svg";
 
     case "tomorrow-page":
-      return "calendar.svg";
+      return "forecast.svg";
 
     case "tomorrow-night-page":
-      return "calendar.svg";
+      return "forecast.svg";
 
     case "7day-page":
-      return "week.svg";
+      return "07day.svg";
   }
-}
+} 
