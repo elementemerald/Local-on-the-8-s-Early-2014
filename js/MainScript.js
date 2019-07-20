@@ -91,7 +91,7 @@ function setInformation(){
 }
 
 function setMainBackground(){
-  getElement('background-image').style.backgroundImage = 'url(https://picsum.photos/1920/1080/?random';
+  getElement('background-image').style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/376883549401382913/590732391392215089/starrynight-1560911965524-421.jpg';
 }
 
 function checkStormMusic(){
