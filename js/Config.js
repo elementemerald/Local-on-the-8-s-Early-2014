@@ -7,7 +7,7 @@ window.CONFIG = {
   unitField: 'imperial', // Supported in TWC API. This field will be filled in automatically. (imperial = e, metric = m, uk_hybrid = h)
   loop: false,
   secrets: {
-    twcAPIKey: 'd522aa97197fd864d36b418f39ebb323'
+    twcAPIKey: 'e1f10a1e78da46f5b10a1e78da96f525'
   },
 
   // Config Functions (index.html settings manager)
